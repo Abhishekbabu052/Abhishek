@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abhishek Babu — Portfolio</title>
+  <meta name="description" content="Portfolio of Abhishek Babu — BCA student & aspiring Full-Stack dev" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent1:#7c3aed;--accent2:#06b6d4;
+      --glass: rgba(255,255,255,0.04);
+      --maxw:1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background: linear-gradient(180deg, #071021 0%, #071026 100%); color:#e6eef8; -webkit-font-smoothing:antialiased;
+      padding:24px; display:flex; align-items:center; justify-content:center;
+    }
+    .wrap{width:100%; max-width:var(--maxw)}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .avatar{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{color:#fff}
+
+    .grid{display:grid;grid-template-columns: 1fr 360px; gap:24px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr} .right{order:-1}}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:22px;border-radius:14px;box-shadow: 0 6px 18px rgba(2,6,23,0.6);}
+
+    .hero{display:flex;gap:18px;align-items:flex-start}
+    .hero h1{margin:0;font-size:28px}
+    .hero p{margin:8px 0 0;color:var(--muted)}
+
+    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .badge{background:var(--glass);padding:6px 10px;border-radius:999px;font-weight:600;color:var(--muted);font-size:13px}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:8px;font-weight:600;color:#dbeafe}
+
+    .section-title{font-size:16px;margin:6px 0 12px;color:#cbd5e1}
+
+    .project{border-radius:10px;padding:14px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
+    .project h3{margin:0 0 6px}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+
+    .contact a.button{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#021025;text-decoration:none;font-weight:700}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+
+    /* subtle utilities */
+    .muted{color:var(--muted)}
+    .list{display:flex;flex-direction:column;gap:12px}
+
+    .right .card{position:sticky; top:24px}
+
+    .socials a{margin-right:10px;color:var(--muted);text-decoration:none;font-weight:700}
+    .svg-ico{width:16px;height:16px;vertical-align:middle;margin-right:6px;opacity:0.9}
+
+    /* small form */
+    .contact-form input, .contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    .contact-form textarea{min-height:90px}
+    .row{display:flex;gap:8px}
+    .row .col{flex:1}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar">AB</div>
+        <div>
+          <div style="font-weight:700">Abhishek Babu</div>
+          <div class="muted" style="font-size:13px">3rd year — BCA, Mar Augusthinose College • Full-Stack course (Entri Elevate, 2023)</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <div>
+        <section class="card hero">
+          <div style="flex:1">
+            <h1>Hello — I’m Abhishek.</h1>
+            <p class="muted">A third-year BCA student and aspiring full-stack developer. I enjoy building small web apps, solving problems in Java and C/C++, and learning Python.</p>
+
+            <div class="badges">
+              <div class="badge">BCA — 3rd year</div>
+              <div class="badge">Full-Stack (2023)</div>
+              <div class="badge">Entri Elevate</div>
+              <div class="badge">Mar Augusthinose College</div>
+            </div>
+
+            <div style="margin-top:16px">
+              <div class="section-title">Featured projects</div>
+              <div class="list">
+                <div class="project">
+                  <h3>1) Student Notes Manager</h3>
+                  <p>A simple CRUD web app built with HTML/CSS/JS and localStorage — upload, search and categorize notes for study.</p>
+                </div>
+                <div class="project">
+                  <h3>2) Java Algorithms Library</h3>
+                  <p>Collection of Java programs: sorting, searching, string problems and pattern-based exercises for practice.</p>
+                </div>
+                <div class="project">
+                  <h3>3) Portfolio (this demo)</h3>
+                  <p>Single-file responsive portfolio with contact form and project summaries.</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top:16px">
+              <div class="section-title">About me</div>
+              <p class="muted">I have experience with C, C++, HTML, CSS, JavaScript, Java and basic Linux. In 2023 I completed a Full Stack Development course. I'm currently learning Python and working on improving my English communication skills and problem-solving.</p>
+            </div>
+
+            <div style="margin-top:14px">
+              <a class="button" href="#contact" style="text-decoration:none;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#021025;font-weight:700">Get in touch</a>
+              <a href="#" style="margin-left:12px;color:var(--muted);text-decoration:none;font-weight:700">Download CV</a>
+            </div>
+
+          </div>
+
+          <div style="width:160px;text-align:center">
+            <div style="background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:12px">
+              <div style="font-size:28px;font-weight:800">AB</div>
+              <div class="muted" style="margin-top:6px">BCA • Dev</div>
+              <div class="badges" style="justify-content:center;margin-top:10px">
+                <div class="badge">JS</div>
+                <div class="badge">Java</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" style="margin-top:18px">
+          <div class="card">
+            <div class="section-title">Projects — short list</div>
+            <div class="list">
+              <div class="project">
+                <h3>Expense Tracker (Web)</h3>
+                <p>Track income and expenses with category filters, monthly summary and localStorage persistence.</p>
+              </div>
+              <div class="project">
+                <h3>Mini Chatbot (JS)</h3>
+                <p>Rule-based chatbot for frequently asked college questions — built with vanilla JavaScript.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="skills" style="margin-top:18px">
+          <div class="card">
+            <div class="section-title">Skills</div>
+            <div class="skills">
+              <div class="skill">C</div>
+              <div class="skill">C++</div>
+              <div class="skill">Java</div>
+              <div class="skill">HTML / CSS</div>
+              <div class="skill">JavaScript</div>
+              <div class="skill">Linux (basic)</div>
+              <div class="skill">Python (learning)</div>
+              <div class="skill">Git / GitHub</div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="right">
+        <div class="card">
+          <div class="section-title">Contact</div>
+          <p class="muted">Prefer email — quick replies. You can also connect on GitHub or LinkedIn.</p>
+
+          <div style="margin-top:12px" class="socials">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+          </div>
+
+          <div style="margin-top:12px" class="contact">
+            <a class="button" href="mailto:your.email@example.com?subject=Hi Abhishek!">Email me</a>
+          </div>
+
+          <div style="margin-top:16px">
+            <div class="section-title">Quick info</div>
+            <div class="muted">Education: Mar Augusthinose College, Ramapuram</div>
+            <div class="muted">Course: BCA — 3rd year</div>
+            <div class="muted">Completed: Full-Stack Dev (2023)</div>
+          </div>
+
+        </div>
+
+        <div style="margin-top:14px" class="card">
+          <div class="section-title">Hire / Collaborate</div>
+          <p class="muted">Open to internships, small freelance tasks, and practice projects. I prioritize learning and building practical apps.</p>
+          <div style="margin-top:12px">
+            <a class="button" href="#contact">Let's talk</a>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;text-align:center;color:var(--muted)">
+          <small>Made with ♥ — demo portfolio</small>
+        </div>
+      </aside>
+
+    </main>
+
+    <footer>
+      <div class="muted">© "Abhishek Babu" — Demo Portfolio</div>
+    </footer>
+  </div>
+
+  <script>
+    // small enhancement: smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault(); const id=a.getAttribute('href'); if(id==='#') return;
+        const el=document.querySelector(id); if(!el) return; el.scrollIntoView({behavior:'smooth', block:'start'});
+      })
+    })
+  </script>
+</body>
+</html>
